@@ -448,11 +448,23 @@ body {
   height: 100%;
 }
 body {
-	background-image: url(https://d2f0ora2gkri0g.cloudfront.net/d6/d8/d6d88945-6fb6-4409-82bc-db21c0bb83ad.jpg);
-    background-size: cover;
-    color:white;
+	color:white;
     font-family: 'Roboto';
     text-shadow: 2px 4px 10px #00000080;
+}
+body:after {
+	content: '';
+	position:absolute;
+	height:100%;
+	width:100%;
+	opacity: 0.8;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;  
+	background-image: url(https://d2f0ora2gkri0g.cloudfront.net/d6/d8/d6d88945-6fb6-4409-82bc-db21c0bb83ad.jpg);
+    background-size: cover;
 }
 h1{
 	font-weight: 800;
@@ -488,7 +500,7 @@ h1{
 			
 			<div class="row">
 				<div class="col" style="text-align: center;margin-bottom: 2rem;">
-					<iframe type="text/html" frameborder="0" width="480" height="394" src="//video.nest.com/embedded/live/UmPA2S6sn2?autoplay=1" allowfullscreen=""></iframe>
+					<iframe type="text/html" frameborder="0" width="480" height="394" src="https://video.nest.com/embedded/live/UmPA2S6sn2?autoplay=1" allowfullscreen=""></iframe>
 				</div>
 			</div>
 
