@@ -491,7 +491,7 @@ h1{
 			<div class="row">
 				<div class="col" style="text-align: center;margin-bottom: 2rem;">
 					<h1>Rumor has it, Tim and Justina are in Vegas Getting Married!</h1>
-					<p class="comeback">Make sure to come back before the clock runs out! You won't want to miss the live reveal.</p>
+					<p class="comeback" id="comeback">Make sure to come back before the clock runs out! You won't want to miss the live reveal.</p>
 				</div>
 			</div>
 			<div class="row">
@@ -531,6 +531,14 @@ h1{
 
 				// Calculate the difference in seconds between the future and current date
 				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+				if (diff <= 0) {
+					$('#comeback').text("It's Go Time! Sit tight for the live reveal!");
+					setTimeout(function(){
+						$('#theTimer').fadeOut();
+			        	$('#theWebcam').fadeIn();
+					}, 5000);
+				}
 
 				// Instantiate a coutdown FlipClock
 				clock = $('.clock').FlipClock(diff, {
